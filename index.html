@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salim Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./assets/js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-bg-light text-gray-800 dark:bg-gray-900 dark:text-gray-100 bg-svg-pattern bg-cover bg-fixed bg-center animate-bg-move transition-all duration-300">
+
+  <!-- Header -->
+  <header class="bg-primary text-white p-4 flex flex-col md:flex-row items-center justify-between relative">
+    <h1 class="text-2xl font-bold">Salim</h1>
+    <div class="flex items-center mt-2 md:mt-0">
+      <!-- Desktop Nav -->
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden ml-4 bg-white text-black px-3 py-1 rounded-full font-semibold">
+        ☰
+      </button>
+
+      <!-- Theme Toggle -->
+      <button id="toggleTheme" class="ml-4 bg-white text-black px-3 py-1 rounded-full font-semibold transition hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 opacity-0 -z-50 transition-all duration-300"></div>
+
+  <!-- Mobile Modal Nav (Drawer-style) -->
+  <div id="signupForm" class="fixed top-0 left-[-100%] bottom-0 bg-white dark:bg-gray-800 text-black dark:text-white p-6 z-50 transition-all duration-300 md:hidden w-64">
+    <button id="closeBtn" class="absolute top-4 right-6 text-2xl font-bold">×</button>
+    <nav class="flex flex-col space-y-4 mt-8 text-lg">
+      <a href="#about" onclick="closeModal()">About</a>
+      <a href="#projects" onclick="closeModal()">Projects</a>
+      <a href="#contact" onclick="closeModal()">Contact</a>
+    </nav>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="max-w-4xl mx-auto p-6 mt-8 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow">
+    <h2 class="text-primary text-2xl font-semibold mb-4">About Me</h2>
+<p>I’m a Electronics Engineering student passionate about open-source, digital signal processing, and building web tools using JavaScript and Python. I love creating tech that simplifies life.</p>  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-7xl mx-auto p-6 mt-8 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow">
+    <h2 class="text-primary text-2xl font-semibold mb-6">Projects</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Signal Processing Simulator</h3>
+        <p>A web-based analog and digital communication simulator using JavaScript and Python FastAPI.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Underwater Acoustic Communication</h3>
+        <p>Underwater acoustic communication using vector sensor.</p>
+      </div>
+	  <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Underwater Visible Light Communication</h3>
+        <p>Underwater visible light communication using laser beam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Website -->
+  <section id="educationalWebsite" class="max-w-4xl mx-auto p-6 mt-8 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow">
+    <h2 class="text-primary text-2xl font-semibold mb-4">Educational Website</h2>
+    <p class="mb-4">Visit my website:</p>
+    <div class="flex space-x-6 text-2xl">
+      <a href="https://www.salimwireless.com/2022/11/search-for-wireless-communication.html" target="_blank" class="hover:text-primary"><i class="fas fa-globe"></i></a>
+    </div>
+  </section>
+  
+  <!-- Resume -->
+  <section id="Resume" class="max-w-4xl mx-auto p-6 mt-8 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow">
+    <h2 class="text-primary text-2xl font-semibold mb-4">Resume</h2>
+    <p class="mb-4">Download my resume:</p>
+    <div class="flex space-x-6 text-2xl">
+      <a href="https://github.com/salim943" target="_blank" class="hover:text-primary"><i class="fas fa-file-alt"></i></a>
+    </div>
+  </section>
+  
+    <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto p-6 mt-8 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow">
+    <h2 class="text-primary text-2xl font-semibold mb-4">Contact</h2>
+    <p class="mb-4">Feel free to connect with me:</p>
+    <div class="flex space-x-6 text-2xl">
+      <a href="https://github.com/salim943" target="_blank" class="hover:text-primary"><i class="fab fa-github"></i></a>
+      <a href="mailto:iamsalim002@gmail.com" class="hover:text-primary"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/salim001" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+  <br/><br/>
+	<div class="footer">
+	  <div class="flex max-sm:flex-col text-white bg-[#111111] px-6">
+		<div class="flex-1 flex flex-col px-[20px]">
+		  <span class="w-1/5 font-bold pb-2 mb-3 border-b-2 border-b-green-500">Section 1</span>
+		  <a href="./page.html" class="footerlink" target="_blank" rel="noopener noreferrer">Link 1</a>
+		  <a href="./page.html" class="footerlink" target="_blank" rel="noopener noreferrer">Link 2</a>
+		</div>
+		<div class="flex-1 flex flex-col px-[15px]">
+		  <span class="w-1/5 font-bold pb-2 mb-3 border-b-2 border-b-green-500">Section 2</span>
+		  <a href="./page.html" class="footerlink" target="_blank" rel="noopener noreferrer">Link 1</a>
+		  <a href="./page.html" class="footerlink" target="_blank" rel="noopener noreferrer">Link 2</a>
+		</div>
+		<div class="flex-1 flex flex-col px-[15px]">
+		  <span class="w-1/5 font-bold pb-2 mb-3 border-b-2 border-b-green-500">Section 3</span>
+		  <a href="./page.html" class="footerlink" target="_blank" rel="noopener noreferrer">Link 1</a>
+		  <a href="./page.html" class="footerlink" target="_blank" rel="noopener noreferrer">Link 2</a>
+		</div>
+	  </div>
+	</div>
+
+    <div class="footer-bottom bg-gray-600 text-white">
+      <p class="copyright">
+        &copy; 2025 <a href="https://www.salimwireless.com/2022/11/search-for-wireless-communication.html" class="copyright-link">SalimWireless.com</a>. All Right Reserved
+      </p>
+    </div>
+	<script>
+	    const toggleTheme = document.getElementById('toggleTheme');
+    const html = document.documentElement;
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      toggleTheme.textContent = '☀️';
+    }
+
+    toggleTheme.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', newTheme);
+      toggleTheme.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
+	</script>
+</body>
+</html>
