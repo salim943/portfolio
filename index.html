@@ -100,6 +100,54 @@
       <a href="https://linkedin.com/in/salim001" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
+
+	    <div class = "post-body-container hidden">I'm Salim.
+	As a Digital Signal Processing engineer with hands-on experience in both core signal processing and full-stack development, I bring a rare combination of deep domain knowledge and the ability to turn algorithms into user-facing applications.
+
+I’ve built DSP simulators from scratch and worked on advanced projects like underwater acoustic communication and visible light communication—fields that require both strong theoretical understanding and practical implementation.
+
+On the development side, I'm proficient in React.js for frontend, and Python/FastAPI for backend services, allowing me to independently create and deploy end-to-end signal processing tools.
+
+This blend of DSP expertise and full-stack development means I can take an idea from research paper to interactive simulator—something that very few engineers can do effectively. I'm confident that I can bring immediate value to your team by delivering both innovation and execution.
+	</div>
+<!-- Popup overlay -->
+<div id="popupOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
+<!-- Popup dialog -->
+<div id="questionPopup" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded shadow-lg z-50 max-w-md w-full">
+  <h2 class="text-lg font-bold mb-2">Ask a Question</h2>
+  
+  <label for="questionInput" class="block mb-1">Enter your question:</label>
+  <input
+    type="text"
+    id="questionInput"
+    placeholder="Example: Why should we hire you?"
+    class="w-full border border-blue-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+  <button id="askBtn" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+    Get Answer
+  </button>
+
+  <h3 class="mt-4 font-semibold">Answer:</h3>
+  <textarea
+    id="output"
+    rows="5"
+    readonly
+    class="w-full border border-blue-500 rounded-md p-2"
+  >Waiting for input...</textarea>
+
+  <div class="mt-4 flex justify-between">
+    <button id="closePopup" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+      Close
+    </button>
+    <button id="loginBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+      Login
+    </button>
+  </div>
+</div>
+</div>
+<script src="q&a.js"></script>
   <br/><br/>
 	<div class="footer">
 	  <div class="flex max-sm:flex-col text-white bg-[#111111] px-6">
