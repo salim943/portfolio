@@ -60,4 +60,4 @@
     });
 
  
-    setsetTimeout(showPopup, 10000);
+    setTimeout(showPopup, 10000);
